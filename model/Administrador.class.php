@@ -1,5 +1,5 @@
 <?php
-class Adm{	
+class Administrador{	
 	private $id;
 	private $nome;
 	private $mail;
@@ -56,7 +56,7 @@ class Adm{
 			$_SESSION["login"] = $this->nome ;
 			setcookie("tempo","existe",time()+10*60);
 			return TRUE;   }
-		else echo "Usuário ou senha incorreto";
+		else echo "Usuario ou senha incorreto";
 	}
 	
 	function insere($mysqli){

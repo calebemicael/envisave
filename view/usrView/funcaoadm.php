@@ -7,13 +7,13 @@ function pesquisa ($adm,$senhadm){
     $_SESSION["nome"] = $senhadm;
     setcookie("tempo","existe",time()+10*60);
     return TRUE;}
- else echo "Usuário ou senha incorreto";
+ else echo "Usuario ou senha incorreto";
  mysql_query($sql) or die(mysql_error());}
  
 function cadastraDM ($nome,$email,$usuario,$senha,$perfil){
  if (!empty($perfil["name"])){ 
  if(!preg_match("/(jpeg|png|gif|bmp)/", $perfil["type"]))
-    $error[] = "Tipo de imagem não suportado.";
+    $error[] = "Tipo de imagem nao suportado.";
  if (empty($error)) {
     preg_match("/\.(gif|bmp|png|jpg|jpeg){1}$/i", $perfil["name"], $ext);
     $nomi = md5(uniqid(time())) . "." . $ext[1];
@@ -38,7 +38,7 @@ function category(){
 function cadproduto ($nome,$marca,$modelo,$valor,$categoria,$qnt,$sta,$foto){
  if (!empty($foto["name"])){ 
  if(!preg_match("/(jpeg|png|gif|bmp)/", $foto["type"]))
-    $error[] = "Tipo de imagem não suportado.";
+    $error[] = "Tipo de imagem nao suportado.";
  if (empty($error)) {
     preg_match("/\.(gif|bmp|png|jpg|jpeg){1}$/i", $foto["name"], $ext);
     $nomi = md5(uniqid(time())) . "." . $ext[1];

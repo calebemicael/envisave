@@ -1,5 +1,5 @@
 <?php
-class Post{
+class Postagem{
 	private $id;
 	private $data;
 	private $texto;

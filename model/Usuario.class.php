@@ -10,7 +10,7 @@ class Usuario{
 	private $pais;
 	private $foto;
 	
-	public function __construct($_id, $_nome, $_mail, $_ende, $_senha, $_cidade, $_estado, $_pais){
+	public function __construct($_id="", $_nome="", $_mail="", $_ende="", $_senha="", $_cidade="", $_estado="", $_pais=""){
 		$this->id = $_id;
 		$this->nome = $_nome;
 		$this->ende = $_ende;
@@ -52,6 +52,7 @@ class Usuario{
 	function getSenha(){
 		return $this->senha;
 	}
+	
 	function setSenha($_senha){
 		$this->senha = $_senha;
 	}
@@ -135,11 +136,31 @@ class Usuario{
 			$_SESSION['login']=$l['idUsuario'];
 			setcookie("tempo","existe",time()+60*60);
 			return true;
-		} else echo "<h2>Usuário e/ou senha incorreto(s)!<BR>"; 
+		} else echo "<h2>Usuario e/ou senha incorreto(s)!<BR>"; 
 	}	
 	
 	function tipo($mysqli, $t1, $t2, $t3, $t4){
-	$q="insert into tipo values (null, $t1, $t2, $t3, $t4, $t4)";
-	$mysqli->query($q);
-	header ('location:index.php');}
-}?>
+		$q="insert into tipo values (null, $t1, $t2, $t3, $t4, $t4)";
+		$mysqli->query($q);
+		header ('location:index.php');}
+	
+		
+	static function load($login){
+		$q = "select * from usuario where login='$login'";
+		$result = mysql_query($conexao,$login);
+		if(mysql_num_rows($result)!=0){
+			$linha = mysql_fetch_array($result);
+			$usr = new Usuario();
+			$usr->setNome($linha['nome']);
+			$usr->setCidade($linha['cidade']);
+			$usr->setEstado($linha['estado']);
+			$usr->setMail($linha['nome']);
+			return $usr;
+		}else{
+			return null;
+		}
+		
+	}
+}
+	
+?>
