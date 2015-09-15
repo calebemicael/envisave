@@ -1,0 +1,162 @@
+body{font-family:century gothic, san-serif;
+	background-image:url('http://www.ileadottawa.ca/images/flower-bg-blue.jpg');
+	background-attachment:fixed;
+	background-size: 100%;}
+	
+* {margin:0; padding:0;}
+
+#menu {top:0; position:absolute; left:-408; right:0px;}
+#menuLO{top:20; position:absolute; right:15;  width:100%;}
+#divmenu{top:-5; position:fixed; z-index:1; width:100%;
+	 background-image:url('http://www.ileadottawa.ca/images/flower-bg-blue.jpg');background-size: 100%;}
+	 
+k{	font-size:21px;
+	text-align: center;
+	line-height:35px;
+	padding: 7px;
+	width:9%;
+	height:35px;
+	float: right;
+	background-color: #00a0ff;
+	-webkit-border-bottom-left-radius: 30px;
+    -webkit-border-bottom-right-radius: 30px;
+	}
+k:hover {	letter-spacing:2px;
+	text-shadow:white 1px 1px 2px;
+	height:40px;}
+
+k2{	font-size:21px;
+	text-align: center;
+	line-height:30px;
+	padding: 6px;
+	width:9%;
+	height:29px;
+	float: right;
+	margin-left:5px;
+	background-color: #00a0ff;
+	-webkit-border-bottom-left-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+	}
+k2:hover{background-image:url('http://images.hotprofileplus.com/formspring-backgrounds/images/bg/3434.jpg');}
+
+li{	display: inline; }
+
+a:link {color:white; text-decoration:none;}
+a:visited{color:white;}
+a.fonte{color:4747B5;}
+a.fonte:hover{text-shadow:gray 3px 1px 15px;}
+a.cad{font-size:23px; color:00BFFF;}
+a.pag{color:#FF69B4;
+	padding:3px;}
+
+#lo{margin-left:65%;}
+#corpe{/*corpo e rodape*/
+	position:relative;
+	width:1075px;
+	margin-left:10.5%;
+	margin-top:5%;
+	border:1px #ccc solid;
+	background-color:#f6f6f6;
+	-webkit-border-bottom-left-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    -webkit-border-top-left-radius: 8px;
+    -webkit-border-top-right-radius: 8px;}
+
+#corpo{	margin-bottom: 35px;
+	margin-left:40px;
+	margin-top:20px;}
+
+#pe{ position: relative;
+bottom:0;
+text-align:center;
+width: 100%;
+border-width: 1px 0px 0px 0px;
+border-style:solid;
+border-color:#ccc;
+line-height:40px;
+font-size:12px;}
+
+#pagina{position: relative;
+margin-bottom:1em;
+text-align:center;
+font-size:19px;}
+
+#post{position: relative;
+	margin-right: 50px;
+	border-radius:5px;
+    border:1px solid   black;
+    box-shadow: 1px 1px 2px #333333;  }
+
+#busca{position:absolute;
+	margin-left:11%;
+	margin-top:-10%; }
+#quad{position:relative; 
+	width:80%;
+	height:230px;
+	left:10%;
+	top:70;
+	border:1px silver solid;
+	background-color:white;
+	-webkit-border-bottom-left-radius: 40px;
+    -webkit-border-bottom-right-radius: 40px;
+    -webkit-border-top-left-radius: 40px;
+    -webkit-border-top-right-radius: 40px;
+	font-size:21px;}
+#log{margin-left:215;}
+#corpoLo{position:relative;
+	width:1075px;
+	margin-left:10.5%;
+	margin-top:182px;
+	border:0px #ccc solid;}
+	
+#pi{ width:230px; height:145px; }
+
+#p1{ width:230px; height:150px; margin-left:4%; text-align:center; color:00a0ff;}
+#p2{ width:230px; height:150px; margin-left:36%; margin-top:-151px; text-align:center; color:00a0ff;}
+#p3{ width:230px; height:150px; margin-left:68%; margin-top:-151px; text-align:center; color:00a0ff;}
+
+h1{font-size:155px;
+	margin-left:32%;
+	margin-top:-230;
+	font-family:vladimir script, san-serif; font-weight:lighter;}
+	
+h2{font-size:19px;
+	margin-left:25px;
+	color:00a0ff;}
+
+img.im{position:relative; left:11%; width:230px;}
+img.seta{MARGIN-left:97%; margin-top:-100px; width:20px;  opacity: 0.7;}
+img.proj{ width:54%;}
+img.projE{width:100%;}
+
+table{position: relative;
+	margin-left: 20px;
+	margin-top: 2.5%;}
+
+input[type=text],[type=password],[type=number]{border-radius:5px;
+    border:1px solid  black;
+    box-shadow: 1px 1px 2px #333333;  
+    width:185px;
+	height:30px;
+	font-size:15px;}
+
+input[type=submit]{width:90px;
+	height:30px;
+	cursor:pointer;
+	margin-top:6px;
+	font-size:14px;
+	background:#00a0ff;
+	border:1px solid #00a0ff;
+	border-radius:5px;
+	color:white;}
+	
+input[type=checkbox]{border-radius:5px;
+    border:1px solid  black;
+	margin-left:15; margin-top:8; margin-right:3;}
+
+input.p{border-color:#ccc;
+	box-shadow:0px 0px 0px;
+	font-size:21px;
+	border-radius:5px;}
