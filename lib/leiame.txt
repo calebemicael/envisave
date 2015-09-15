@@ -1,0 +1,3 @@
+Coloquem aqui os arquivos que nao fazem parte do projeto, necessariamente, mas 
+que sao necessarios pra o desenvolvimento. Exemplo: banco de dados, txt diversos
+etc.
