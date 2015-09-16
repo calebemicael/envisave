@@ -101,7 +101,7 @@ class Postagem{
 		$result = mysql_query($q,$mysqli);
 		if(!empty($result)){
 			$linha = mysql_fetch_array($result);
-			$post = new Usuario();
+			$post = new Post();
 			$post->setData($linha['data']);
 			$post->setTexto($linha['texto']);
 			$post->setIdUsuario($linha['idusuario']);

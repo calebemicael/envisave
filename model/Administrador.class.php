@@ -121,7 +121,7 @@ class Administrador{
 		$result = mysql_query($q,$mysqli);
 		if(!empty($result)){
 			$linha = mysql_fetch_array($result);
-			$admin = new Usuario();
+			$admin = new Admin();
 			$admin->setNome($linha['nome']);
 			$admin->setMail($linha['mail']);
 			$admin->setSenha($linha['senha']);

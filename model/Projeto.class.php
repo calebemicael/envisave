@@ -126,7 +126,7 @@ class Projeto{
 		$result = mysql_query($q,$mysqli);
 		if(!empty($result)){
 			$linha = mysql_fetch_array($result);
-			$projeto = new Usuario();
+			$projeto = new Projeto();
 			$projeto->setNome($linha['nome']);
 			$projeto->setIdPessoa($linha['idpessoa']);
 			$projeto->setIntegrantes($linha['integrantes']);
