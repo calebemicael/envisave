@@ -163,7 +163,13 @@ class Usuario{
 		}else{
 			return null;
 		}
-		
+	}
+	
+	function save(){
+		global $mysqli;
+		$query = "insert into usuario values ('$this->id', '$this->nome', '$this->mail', '$this->senha','$this->ende', '$this->cidade', '$this->estado','$this->pais')";
+		mysql_query($query,$mysqli);
+		return (mysql_affected_rows($mysqli) == 1);
 	}
 }
 	

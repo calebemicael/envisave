@@ -1,5 +1,5 @@
 <BR><BR><div id='corpoLo'><h2>Cadastre-se</h2></p>
-<form name='cadastro' action='insere.php' method='POST'><table>
+<form name='cadastro' action='?a=create' method='POST'><table>
 	<tr><td>Nome: </td><td><input type='text' name='nome' value='<?php if(!empty($_POST['cadastrar']) && !empty($_POST['nome']))	echo $_POST['nome']; 
 	elseif (!empty($_POST['cadastrar']) && empty($_POST['nome'])) echo '*Informe Nome!';?>'/></td></tr>
 		

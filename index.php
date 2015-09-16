@@ -18,6 +18,8 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <title>EnviSave</title>
 				<link rel="stylesheet" href="css/es.css" type="text/css" media="all"/>
+				<script src="js/jquery-1.11.3.js" type="text/javascript"></script>
+				<script src="js/functions.js" type="text/javascript"></script>
     </head>
     <body>
         <?php
