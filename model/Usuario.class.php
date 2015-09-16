@@ -1,4 +1,6 @@
 <?php
+include_once './persist/conexao.php';
+
 class Usuario{
 	private $id;
 	private $nome;
@@ -49,7 +51,7 @@ class Usuario{
 		$this->mail = $_mail;
 	}
 	
-	function getSenha(){
+	public function getSenha(){
 		return $this->senha;
 	}
 	
@@ -146,15 +148,17 @@ class Usuario{
 	
 		
 	static function load($login){
-		$q = "select * from usuario where login='$login'";
-		$result = mysql_query($conexao,$login);
-		if(mysql_num_rows($result)!=0){
+		global $mysqli;
+		$q = "SELECT * FROM  `usuario` WHERE nome =  'calebemicael'";
+		$result = mysql_query($q,$mysqli);
+		if(!empty($result)){
 			$linha = mysql_fetch_array($result);
 			$usr = new Usuario();
 			$usr->setNome($linha['nome']);
 			$usr->setCidade($linha['cidade']);
 			$usr->setEstado($linha['estado']);
 			$usr->setMail($linha['nome']);
+			$usr->setSenha($linha['senha']);
 			return $usr;
 		}else{
 			return null;

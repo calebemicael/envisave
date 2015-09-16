@@ -1,7 +1,7 @@
-<div id='divmenu'><a href='login.php'><img class='im'src='images/LOGOES.png'/></a><h1>EnviSave</h1>
+<div id='divmenu'><a href='#login'><img class='im'src='images/LOGOES.png'/></a><h1>EnviSave</h1>
 <ul id='menuLo'>
- <li><a href='login.php#login'><k2>Login</k2></a></li>
- <li><a href='insere.php'><k2>Cadastro</k2></a></li></ul></div></head><ul>
+ <li><a href='#login'><k2>Login</k2></a></li>
+ <li><a href='?a=signup'><k2>Cadastro</k2></a></li></ul></div></head><ul>
 <div id='corpoLo'>
 
 <div id='quad'><br><h2>Destaques</h2>

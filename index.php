@@ -2,6 +2,8 @@
 //session_start();
 //require "conexao.php";
 //require 'classes/usuario.class.php'; 
+include_once './controller/globals.php';
+include_once './controller/Controller.php';
 ?>
 <!DOCTYPE html>
 <!--
@@ -19,7 +21,6 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-					include_once './controller/Controller.php';
 					$controller = new Controller();
 					if(isset($_GET['a'])){
 						$controller->invoke($_GET['a']);	

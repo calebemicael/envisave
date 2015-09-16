@@ -1,6 +1,7 @@
 <?php
 
-include_once("../model/ModelHub.php");
+
+include 'model/ModelHub.php';
 
 class Controller {
 
@@ -14,6 +15,7 @@ class Controller {
       switch($acao){
         case "home": $this->mostrarPaginaInicial(); break;
 				case "login": $this->realizarLogin(); break;
+				case "signup": $this->mostrarSignup(); break;
         default: $this->mostrarPaginaInicial();
       }
     }
@@ -23,24 +25,24 @@ class Controller {
 			include "view/publicView/login.view.php";
 		}
 		
+		private function mostrarSignup(){
+			include "view/publicView/signup.view.php";
+		}
+		
 		private function realizarLogin(){
 			//include "view/publicView/perfil.php";
 			if(!empty($_POST['enviar'])){
-				//if (!empty($_POST['nome']) && !empty($_POST['senha'])){
-					//$usr = new Usuario(null, $_POST['nome'], null,null,$_POST['senha'],null,null,null,null, null);
-					//if($usr->login($mysqli))
-				//if(!empty($_POST['nome']) && !empty($_POST['senha']))
 				$usr = Usuario::load($_POST['nome']);
 				if($usr != null){
 					$senha_digitada = $_POST['senha'];
-					if($usr.getSenha()==$senha_digitada){
-						//salva o objeto $usr na sessao.
+					if(trim($usr->getSenha()) == trim($senha_digitada)){
+						//TODO: salvar o objeto $usr na sessao.
 						include "view/usrView/home.view.php";
 					}else{
-						echo '<h2>Por favor, preencha os campos corretamente';
+						echo '<h2>Por favor, preencha os campos corretamente </h2>';
 					}
 				}else{
-					echo '<h2>Usuario nao existe';
+					echo '<h2>Usuario nao existe </h2>';
 				}
 			}
 		}
