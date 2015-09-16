@@ -94,5 +94,21 @@ class Postagem{
 			echo '</table></div>';
 		}
 	}
+        
+         static function load($login){
+		global $mysqli;
+		$q = "SELECT * FROM  `postagem` WHERE nome =  'postagem_t1'";
+		$result = mysql_query($q,$mysqli);
+		if(!empty($result)){
+			$linha = mysql_fetch_array($result);
+			$post = new Usuario();
+			$post->setData($linha['data']);
+			$post->setTexto($linha['texto']);
+			$post->setIdUsuario($linha['idusuario']);
+			return $post;
+		}else{
+			return null;
+		}
+	}  
 }
 ?>

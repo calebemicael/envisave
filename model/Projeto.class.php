@@ -117,5 +117,26 @@ class Projeto{
 			echo '<td><a href=deleta.php?id='.$linha['idprojeto'].'>Excluir</a></td>';
 			echo '<td><a href=alteraProj.php?id='.$linha['idprojeto'].'>Alterar</a></td></tr>';
 		} echo '</table>';}
-		else echo "Nenhum resultado encontrado para busca<BR><BR>";}
+		else echo "Nenhum resultado encontrado para busca<BR><BR>";
+        }
+        
+        static function load($login){
+		global $mysqli;
+		$q = "SELECT * FROM  `projeto` WHERE nome =  'watercare'";
+		$result = mysql_query($q,$mysqli);
+		if(!empty($result)){
+			$linha = mysql_fetch_array($result);
+			$projeto = new Usuario();
+			$projeto->setNome($linha['nome']);
+			$projeto->setIdPessoa($linha['idpessoa']);
+			$projeto->setIntegrantes($linha['integrantes']);
+			$projeto->setDescricao($linha['descricao']);
+			$projeto->setProblem($linha['problem']);
+                        $projeto->setJustif($linha['justif']);
+                        $projeto->setObj($linha['obj']);
+			return $projeto;
+		}else{
+			return null;
+		}
+	}                      
 }?>

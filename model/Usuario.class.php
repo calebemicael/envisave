@@ -157,7 +157,7 @@ class Usuario{
 			$usr->setNome($linha['nome']);
 			$usr->setCidade($linha['cidade']);
 			$usr->setEstado($linha['estado']);
-			$usr->setMail($linha['nome']);
+			$usr->setMail($linha['mail']);
 			$usr->setSenha($linha['senha']);
 			return $usr;
 		}else{

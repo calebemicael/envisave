@@ -114,4 +114,24 @@ class Administrador{
 			echo '<td><a href=altera.php?id='.$linha['idPessoa'].'>Alterar</a></td></tr>';
 		} echo '</table>';}
 		else echo "Nenhum resultado encontrado para busca<BR><BR>";}
-}?>
+
+        static function load($login){
+		global $mysqli;
+		$q = "SELECT * FROM  `administrador` WHERE nome =  'calebe'";
+		$result = mysql_query($q,$mysqli);
+		if(!empty($result)){
+			$linha = mysql_fetch_array($result);
+			$admin = new Usuario();
+			$admin->setNome($linha['nome']);
+			$admin->setMail($linha['mail']);
+			$admin->setSenha($linha['senha']);
+                        $admin->setFoto($linha['foto']);
+			return $admin;
+		}else{
+			return null;
+		}
+	}            
+                  
+                
+    }
+?>
