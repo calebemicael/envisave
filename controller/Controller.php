@@ -1,7 +1,7 @@
 <?php
 
 
-include 'model/ModelHub.php';
+include PATH_ROOT.'/model/ModelHub.php';
 
 class Controller {
 

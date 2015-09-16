@@ -1,4 +1,5 @@
 <?php
+include_once PATH_ROOT.'/persist/conexao.php';
 class Administrador{	
 	private $id;
 	private $nome;

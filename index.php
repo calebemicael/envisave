@@ -2,8 +2,8 @@
 //session_start();
 //require "conexao.php";
 //require 'classes/usuario.class.php'; 
-include_once './controller/globals.php';
-include_once './controller/Controller.php';
+include_once './globals.php';
+include_once PATH_ROOT.'/controller/Controller.php';
 ?>
 <!DOCTYPE html>
 <!--

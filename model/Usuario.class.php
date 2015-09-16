@@ -1,5 +1,5 @@
 <?php
-include_once './persist/conexao.php';
+include_once PATH_ROOT.'/persist/conexao.php';
 
 class Usuario{
 	private $id;
@@ -157,7 +157,7 @@ class Usuario{
 			$usr->setNome($linha['nome']);
 			$usr->setCidade($linha['cidade']);
 			$usr->setEstado($linha['estado']);
-			$usr->setMail($linha['mail']);
+			$usr->setMail($linha['email']);
 			$usr->setSenha($linha['senha']);
 			return $usr;
 		}else{
