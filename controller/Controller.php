@@ -11,7 +11,7 @@ class Controller {
         // inicializar aqui o que for necessario
     }
 		
-    public function invoke($acao) {
+    public function invoke($acao="home") {
         switch($acao){
             case "home": $this->mostrarPaginaInicial(); break;
             case "login": $this->realizarLogin(); break;
