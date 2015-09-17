@@ -1,7 +1,7 @@
 <?php
 	
-	$mysqli = mysql_connect($CONFIG['db_server'], $CONFIG['db_user'], $CONFIG['db_pass']) or die('Danosse');
-	mysql_select_db($CONFIG['db_name'], $mysqli) or die('Danosse muito');
+	$mysqli = mysql_connect($CONFIG['db_server'], $CONFIG['db_user'], $CONFIG['db_pass']) or die('Problema ao realizar a conexao.');
+	mysql_select_db($CONFIG['db_name'], $mysqli) or die('Problema ao selecionar a base de dados.');
 	//$mysqli = new mysqli('localhost', 'root', '12345', 'envis');
     /*if ($mysqli->connect_error) {
 		die('Erro na Conexão (' . $mysqli->connect_errno . ') ' . $mysqli->connect_error);}
