@@ -131,7 +131,13 @@ class Administrador{
 		}else{
 			return null;
 		}
-	}            
+	}  
+        function save(){
+		global $mysqli;
+		$query = "insert into adm values ('$this->idAdm', '$this->nome', '$this->email', '$this->senha')";
+		mysql_query($query,$mysqli);
+		return (mysql_affected_rows($mysqli) == 1);
+	}
                   
                 
     }

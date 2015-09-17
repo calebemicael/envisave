@@ -156,6 +156,12 @@ class Projeto {
 			return null;
 		}
 	}
+        function save(){
+		global $mysqli;
+		$query = "insert into projeto values ('$this->id', '$this->nome', '$this->idpessoa', '$this->integrantes','$this->descricao', '$this->problema', '$this->justif','$this->obj')";
+		mysql_query($query,$mysqli);
+		return (mysql_affected_rows($mysqli) == 1);
+	}
 
 }
 
