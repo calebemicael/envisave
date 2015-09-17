@@ -110,6 +110,12 @@ class Postagem{
 		}else{
 			return null;
 		}
-	}  
+	} 
+        function save(){
+		global $mysqli;
+		$query = "insert into post values ('$this->idPost', '$this->post', '$this->data', '$this->idUsuario')";
+		mysql_query($query,$mysqli);
+		return (mysql_affected_rows($mysqli) == 1);
+	}
 }
 ?>
