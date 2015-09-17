@@ -33,4 +33,13 @@ class Amizade{
 	}
         
         // funcao load
-        //funcao de salvar
+        
+        
+        function save(){
+		global $mysqli;
+		$query = "insert into amizade values ('$this->idAmizade', '$this->idusuario1', '$this->idUsuario2')";
+		mysql_query($query,$mysqli);
+		return (mysql_affected_rows($mysqli) == 1);
+	}
+        
+}
