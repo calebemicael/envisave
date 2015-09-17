@@ -1,0 +1,7 @@
+
+Sugestões de novas classes:
+
+amizade
+vitrine
+estoque 
+mensagem
