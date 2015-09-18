@@ -3,6 +3,7 @@
 //require "conexao.php";
 //require 'classes/usuario.class.php'; 
 include_once './globals.php';
+	echo PATH_ROOT;
 include_once PATH_ROOT.'/controller/Controller.php';
 ?>
 <!DOCTYPE html>

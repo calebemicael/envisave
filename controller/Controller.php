@@ -39,10 +39,10 @@ class Controller {
         $usr->setEnde($_POST['ende']);
         $usr->setCidade($_POST['city']);
         $usr->setEstado($_POST['state']);
-	$usr->setPais($_POST['pais']);
-	$usr->setMail($_POST['mail']);
-	$usr->setSenha($_POST['senha']);
-	if($usr->save()){
+				$usr->setPais($_POST['pais']);
+				$usr->setMail($_POST['mail']);
+				$usr->setSenha($_POST['senha']);
+				if($usr->save()){
             header("location: ?a=profile");
         }else{
             echo "Deu problema, usuario duplicado..., whatever";

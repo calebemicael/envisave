@@ -16,9 +16,9 @@ class Amizade{
 		return $this->idAmizade;
 	}
         
-	function setId($_idAmizade){
-		$this->id = $_idAmizade;
-	}
+//	function setId($_idAmizade){
+//		$this->id = $_idAmizade;
+//	}
          function getIdU1(){
 		return $this->idUsu1;
 	}
