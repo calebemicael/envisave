@@ -149,7 +149,7 @@ class Usuario{
 		
 	static function load($login){
 		global $mysqli;
-		$q = "SELECT * FROM  `usuario` WHERE nome =  'calebemicael'";
+		$q = "SELECT * FROM  `usuario` WHERE nome =  '$login'";
 		$result = mysql_query($q,$mysqli);
 		if(!empty($result)){
 			$linha = mysql_fetch_array($result);
@@ -170,6 +170,24 @@ class Usuario{
 		$query = "insert into usuario values ('$this->id', '$this->nome', '$this->mail', '$this->senha','$this->ende', '$this->cidade', '$this->estado','$this->pais')";
 		mysql_query($query,$mysqli);
 		return (mysql_affected_rows($mysqli) == 1);
+	}
+	
+	static function listar($busca){
+			global $mysqli;
+			$q = "select * from usuario where nome like '%$busca%' or endereco like '%$busca%' or cidade like '%$busca%'";
+			$res = mysql_query($q, $mysqli);
+			$lista = array();
+			if (!empty($res)){
+					while ($linha = mysql_fetch_array($res)){
+						$usr = Usuario::load($linha['nome']);
+						$lista[] = $usr;
+					}
+					//print_r($lista);
+					return $lista;
+			}
+			else{
+				return $lista;
+			}
 	}
 }
 	

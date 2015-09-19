@@ -18,7 +18,7 @@ class Controller {
             case "signup": $this->mostrarSignup(); break;
             case "create": $this->criarNovoUsuario(); break;
             case "profile": $this->mostrarPaginaInicialDoUsuario();break;
-            case "busca": $this->buscaUsuario();break;
+            case "busca": $this->buscarUsuario();break;
             case "post": $this->inserePostagem(); break;
             default: $this->mostrarPaginaInicial();
         }
@@ -72,20 +72,10 @@ class Controller {
 	}
     }
     
-    private function buscaUsuario(){
+    private function buscarUsuario(){
         $busca = $_POST['pesquisa'];
-        $q = "select * from Usuario where nome like '%$busca%' or endereco like '%$busca%' or cidade like '%$busca%'";
-        $res = $mysqli->query($q);
-        echo "<div id='corpe'>";
-        if ($res->num_rows)
-            while ($linha = $res->fetch_array()){
-                echo "<br><div id='post'><table><tr><td>".$linha['nome']." - ".
-                     $linha['endereco']." - ".
-                     $linha['cidade'].'</td>';
-                echo '<td><a href=perfil.php?id='.$linha['idusuario'].'>Ver</a></td></tr>';
-                echo '</table></div>';
-            }
-        else echo "Nenhum resultado encontrado para busca<BR><BR></div>";
+        $lista = Usuario::listar($busca);
+				include "view/usrView/listarUsuarios.view.php";
     }
     
     private function inserePostagem(){
@@ -94,7 +84,7 @@ class Controller {
         $post->setTexto($_POST['escrito']);
         $post->setData();
         $post->setIdusuario();
-        if($post_>save())
+        if($post->save())
             header("location: ?a=home");
         else{
             echo "eita";
